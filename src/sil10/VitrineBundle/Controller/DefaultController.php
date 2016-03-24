@@ -14,7 +14,7 @@ class DefaultController extends Controller
     public function showNameAction($name){
         return $this->render('sil10VitrineBundle:Default:index.html.twig', array('name'=>$name));
     }
-    
+      
     //affiche les mentions du site
     public function showMentionAction(){
         return $this->render('sil10VitrineBundle:Default:mention.html.twig');
