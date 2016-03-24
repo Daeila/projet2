@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Librio</title>
+    </head>
+    <body>
+        <a href="/accueil">Retour accueil</a><a href="/catalogue">Retour catalogue</a>
+        <table>
+            <tr><td>Libelle</td><td>Prix</td><td>Stock</td></tr>
+            {% for article in articles %}
+            <tr>
+                <td>{{ article.libelle }}</td>
+                <td>{{ article.prix }}</td>
+                <td>{{ article.stock }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

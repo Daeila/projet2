@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Librio</title>
+    </head>
+    <body>
+        <a href="/accueil">Retour accueil</a>
+        <table>
+        {% for categorie in categories %}
+            <tr>
+                <td><a href="/articlesParCategorie/{{ categorie.id }}">{{categorie.id}}</a></td>
+                <td>{{categorie.intitule}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>

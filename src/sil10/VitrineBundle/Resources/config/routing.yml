@@ -1,0 +1,19 @@
+sil_10_vitrine_homepage:
+    path:     /
+    defaults: { _controller: sil10VitrineBundle:Default:showName,name:visiteur }
+    
+_default:
+    pattern: /accueil/{name}
+    defaults: { _controller: sil10VitrineBundle:Default:showName,name:visiteur}
+    
+_mention:
+    pattern: /mention
+    defaults: { _controller: sil10VitrineBundle:Default:showMention}
+    
+_catalogue:
+    pattern: /catalogue
+    defaults: { _controller: sil10VitrineBundle:Default:showCatalogue}
+    
+_articlesParCategorie:
+    pattern: /articlesParCategorie/{id}
+    defaults: { _controller: sil10VitrineBundle:Default:showArticlesParCategorie}

@@ -1,0 +1,11 @@
+sil_10_vitrine:
+    resource: "@sil10VitrineBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+# app/config/routing.yml
+vitrine:
+    resource: "@sil10VitrineBundle/Resources/config/routing.yml"
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,31 @@
+# src/sil10/VitrineBundle/Ressources/config/doctrine/LigneDeCommande.orm.yml
+sil10\VitrineBundle\Entity\LigneDeCommande:
+    type: entity
+    table: ligneDeCommande
+    id:
+        article:
+            associationKey: true
+        commande:
+            associationKey: true
+
+    fields:
+        quantite:
+            type: integer
+        prix:
+            type: decimal
+            scale: 2
+    manyToOne:
+        commande:
+            targetEntity: Commande
+            inversedBy: ligneDeCommandes
+            joinColumn:
+                name: commande_id
+                referencedColumnName: id
+        article:
+            targetEntity: Article
+            inversedBy: ligneDeCommandes
+            joinColumn:
+                name: article_id
+                referencedColumnName: id
+                    
+     

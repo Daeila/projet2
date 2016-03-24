@@ -1,0 +1,18 @@
+# src/sil10/VitrineBundle/Ressources/config/doctrine/Categorie.orm.yml
+sil10\VitrineBundle\Entity\Categorie:
+    type: entity
+    table: categorie
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        intitule:
+            type: string
+            lengh: 100
+    oneToMany:
+        articles: 
+            targetEntity: Article
+            mappedBy: categorie
+            
+    
