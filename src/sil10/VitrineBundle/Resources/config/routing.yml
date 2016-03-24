@@ -17,3 +17,6 @@ _catalogue:
 _articlesParCategorie:
     pattern: /articlesParCategorie/{id}
     defaults: { _controller: sil10VitrineBundle:Default:showArticlesParCategorie}
+
+_contenuPanier:
+    pattern:

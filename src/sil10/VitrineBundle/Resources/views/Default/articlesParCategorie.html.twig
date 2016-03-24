@@ -4,7 +4,7 @@
         <title>Librio</title>
     </head>
     <body>
-        <a href="/accueil">Retour accueil</a><a href="/catalogue">Retour catalogue</a>
+        <a href="{{ path('_default') }}">Retour accueil</a><a href="{{ path('_catalogue') }}">Retour catalogue</a>
         <table>
             <tr><td>Libelle</td><td>Prix</td><td>Stock</td></tr>
             {% for article in articles %}

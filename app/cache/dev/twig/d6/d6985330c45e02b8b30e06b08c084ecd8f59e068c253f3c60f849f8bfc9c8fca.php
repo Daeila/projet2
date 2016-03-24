@@ -15,8 +15,8 @@ class __TwigTemplate_738ac3e30dc60f0f2687a496402a763c16aadf55b44bdc12e12bc812391
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e3d23895b8aba26cebf0fc32b692807966e2bbebd4a5080eadd547aea24a9279 = $this->env->getExtension("native_profiler");
-        $__internal_e3d23895b8aba26cebf0fc32b692807966e2bbebd4a5080eadd547aea24a9279->enter($__internal_e3d23895b8aba26cebf0fc32b692807966e2bbebd4a5080eadd547aea24a9279_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sil10VitrineBundle:Default:catalogue.html.twig"));
+        $__internal_f8b6e6e4509b488c5076fd7231bde67613ed569fd334b4cdcfbf20209d1e876a = $this->env->getExtension("native_profiler");
+        $__internal_f8b6e6e4509b488c5076fd7231bde67613ed569fd334b4cdcfbf20209d1e876a->enter($__internal_f8b6e6e4509b488c5076fd7231bde67613ed569fd334b4cdcfbf20209d1e876a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sil10VitrineBundle:Default:catalogue.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -25,7 +25,10 @@ class __TwigTemplate_738ac3e30dc60f0f2687a496402a763c16aadf55b44bdc12e12bc812391
         <title>Librio</title>
     </head>
     <body>
-        <a href=\"/accueil\">Retour accueil</a>
+        <a href=\"";
+        // line 7
+        echo $this->env->getExtension('routing')->getPath("_default");
+        echo "\">Retour accueil</a>
         <table>
         ";
         // line 9
@@ -34,9 +37,9 @@ class __TwigTemplate_738ac3e30dc60f0f2687a496402a763c16aadf55b44bdc12e12bc812391
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
             // line 10
             echo "            <tr>
-                <td><a href=\"/articlesParCategorie/";
+                <td><a href=\"";
             // line 11
-            echo twig_escape_filter($this->env, $this->getAttribute($context["categorie"], "id", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_articlesParCategorie", array("id" => $this->getAttribute($context["categorie"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["categorie"], "id", array()), "html", null, true);
             echo "</a></td>
@@ -56,7 +59,7 @@ class __TwigTemplate_738ac3e30dc60f0f2687a496402a763c16aadf55b44bdc12e12bc812391
 </html>
 ";
         
-        $__internal_e3d23895b8aba26cebf0fc32b692807966e2bbebd4a5080eadd547aea24a9279->leave($__internal_e3d23895b8aba26cebf0fc32b692807966e2bbebd4a5080eadd547aea24a9279_prof);
+        $__internal_f8b6e6e4509b488c5076fd7231bde67613ed569fd334b4cdcfbf20209d1e876a->leave($__internal_f8b6e6e4509b488c5076fd7231bde67613ed569fd334b4cdcfbf20209d1e876a_prof);
 
     }
 
@@ -72,7 +75,7 @@ class __TwigTemplate_738ac3e30dc60f0f2687a496402a763c16aadf55b44bdc12e12bc812391
 
     public function getDebugInfo()
     {
-        return array (  54 => 15,  45 => 12,  39 => 11,  36 => 10,  32 => 9,  22 => 1,);
+        return array (  57 => 15,  48 => 12,  42 => 11,  39 => 10,  35 => 9,  30 => 7,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -81,11 +84,11 @@ class __TwigTemplate_738ac3e30dc60f0f2687a496402a763c16aadf55b44bdc12e12bc812391
 /*         <title>Librio</title>*/
 /*     </head>*/
 /*     <body>*/
-/*         <a href="/accueil">Retour accueil</a>*/
+/*         <a href="{{ path('_default') }}">Retour accueil</a>*/
 /*         <table>*/
 /*         {% for categorie in categories %}*/
 /*             <tr>*/
-/*                 <td><a href="/articlesParCategorie/{{ categorie.id }}">{{categorie.id}}</a></td>*/
+/*                 <td><a href="{{ path('_articlesParCategorie', {  'id':categorie.id})}}">{{categorie.id}}</a></td>*/
 /*                 <td>{{categorie.intitule}}</td>*/
 /*             </tr>*/
 /*         {% endfor %}*/

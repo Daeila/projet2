@@ -6,30 +6,34 @@ class Panier {
     
     private $contenu;
     //Tableau - contenu[i] = quantite d'article d’id=i dans le panier)
-    
-    public function __construct() {
-    // initialise le contenu
-        $this->$contenu=[];
+
+    public function __construct($contenu){
+        $this->contenu = $contenu;
     }
+
     
     // ajoute l'article $articleId au contenu, en quantité $qte
     // (vérifier si l'article n'y est pas déjà)
+    //TODO $contenu est un tableau avec pour indice un article et comme valeur la quantité de cet article, $qte=1 car on ajoute un article à la fois
     public function ajoutArticle ($articleId, $qte=1) {
-        foreach ($contenu as $article => $value) {
-            if($article->getId()==$articleId){
-                
-                
+
+        foreach ($this->contenu as $article => $value) {
+            if(strcmp($value,$articleId)==0){
+                $value[$articleId]=$value[$articleId]+$qte;
+            }
+            else{
+                $this->contenu[$articleId]=$qte;
             }
         }
-
     }
+
     public function supprimeArticle($articleId) {
-        unset($contenu[$articleId]);            
+        unset($this->contenu[$articleId]);
     }
     
     public function viderPanier() {
-        foreach ($contenu as $article => $value) {
-            unset($contenu[$article]);
+        foreach ($this->contenu as $article => $value) {
+            unset($this->contenu[$article]);
         }   
     }
     
