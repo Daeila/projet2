@@ -353,3 +353,10 @@ da639d,127.0.0.1,GET,http://localhost:8000/articlesParCategorie/1,1458828024,,20
 a6abea,127.0.0.1,GET,http://localhost:8000/catalogue,1458828037,,200
 971125,127.0.0.1,GET,http://localhost:8000/articlesParCategorie/2,1458828038,,200
 f403a6,127.0.0.1,GET,http://localhost:8000/accueil,1458828041,,200
+668684,127.0.0.1,GET,http://localhost:8000/accueil,1458893366,,200
+f113ed,127.0.0.1,GET,http://localhost:8000/,1458893502,,200
+67fa2a,127.0.0.1,GET,http://localhost:8000/catalogue,1458901739,,200
+0fd9fc,127.0.0.1,GET,http://localhost:8000/accueil,1458903371,31dfa6,200
+31dfa6,127.0.0.1,GET,http://localhost:8000/accueil,1458903371,,500
+31989f,127.0.0.1,GET,http://localhost:8000/accueil,1458903453,601bed,200
+601bed,127.0.0.1,GET,http://localhost:8000/accueil,1458903453,,500

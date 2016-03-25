@@ -15,8 +15,8 @@ class __TwigTemplate_06eb0cdaa9b958e0f7b056f1a128c4a9c9b8f2350dc81a26f992cfe277a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_26a5e87f1160bc7142995b2777942eb5986860a61a9e5498cee3ebbfd9bcbed4 = $this->env->getExtension("native_profiler");
-        $__internal_26a5e87f1160bc7142995b2777942eb5986860a61a9e5498cee3ebbfd9bcbed4->enter($__internal_26a5e87f1160bc7142995b2777942eb5986860a61a9e5498cee3ebbfd9bcbed4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sil10VitrineBundle:Default:index.html.twig"));
+        $__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b = $this->env->getExtension("native_profiler");
+        $__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b->enter($__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sil10VitrineBundle:Default:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -34,6 +34,10 @@ class __TwigTemplate_06eb0cdaa9b958e0f7b056f1a128c4a9c9b8f2350dc81a26f992cfe277a
         // line 9
         echo $this->env->getExtension('routing')->getPath("_catalogue");
         echo "\">Catalogue</a>
+        <a href=\"";
+        // line 10
+        echo $this->env->getExtension('routing')->getPath("_contenuPanier");
+        echo "\">Panier</a>
     </body>
     
     <a href=\"/mention\">Mention</a>
@@ -41,7 +45,7 @@ class __TwigTemplate_06eb0cdaa9b958e0f7b056f1a128c4a9c9b8f2350dc81a26f992cfe277a
 
 ";
         
-        $__internal_26a5e87f1160bc7142995b2777942eb5986860a61a9e5498cee3ebbfd9bcbed4->leave($__internal_26a5e87f1160bc7142995b2777942eb5986860a61a9e5498cee3ebbfd9bcbed4_prof);
+        $__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b->leave($__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b_prof);
 
     }
 
@@ -57,7 +61,7 @@ class __TwigTemplate_06eb0cdaa9b958e0f7b056f1a128c4a9c9b8f2350dc81a26f992cfe277a
 
     public function getDebugInfo()
     {
-        return array (  35 => 9,  30 => 7,  22 => 1,);
+        return array (  39 => 10,  35 => 9,  30 => 7,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -69,6 +73,7 @@ class __TwigTemplate_06eb0cdaa9b958e0f7b056f1a128c4a9c9b8f2350dc81a26f992cfe277a
 /*         <p>Bonjour {{ name }} bienvenu sur notre site !</p>*/
 /*         */
 /*         <a href="{{ path('_catalogue') }}">Catalogue</a>*/
+/*         <a href="{{ path('_contenuPanier') }}">Panier</a>*/
 /*     </body>*/
 /*     */
 /*     <a href="/mention">Mention</a>*/

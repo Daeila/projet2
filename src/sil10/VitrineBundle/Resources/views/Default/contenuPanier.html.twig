@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Librio</title>
+</head>
+<body>
+<a href="{{ path('_default') }}">Retour accueil</a>
+<!-- affiche l’intitulé de chaque article, son prix, la quantité mise en panier et le
+montant total du panier -->
+<table>
+    {% for categorie in categories %}
+        <tr>
+            <td><a href="{{ path('_articlesParCategorie', {  'id':categorie.id})}}">{{categorie.id}}</a></td>
+            <td>{{categorie.intitule}}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

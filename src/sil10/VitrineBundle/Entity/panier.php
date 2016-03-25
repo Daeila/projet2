@@ -14,12 +14,14 @@ class Panier {
     
     // ajoute l'article $articleId au contenu, en quantité $qte
     // (vérifier si l'article n'y est pas déjà)
-    //TODO $contenu est un tableau avec pour indice un article et comme valeur la quantité de cet article, $qte=1 car on ajoute un article à la fois
+
+    // $contenu est un tableau avec pour indice un article et comme valeur la quantité de cet article, $qte=1 car
+    // on ajoute un article à la fois
     public function ajoutArticle ($articleId, $qte=1) {
 
         foreach ($this->contenu as $article => $value) {
-            if(strcmp($value,$articleId)==0){
-                $value[$articleId]=$value[$articleId]+$qte;
+            if($article->getId()==$articleId){
+                $this->contenu[$articleId]=$value+$qte;
             }
             else{
                 $this->contenu[$articleId]=$qte;
@@ -32,7 +34,7 @@ class Panier {
     }
     
     public function viderPanier() {
-        foreach ($this->contenu as $article => $value) {
+        foreach ($this->contenu as $article) {
             unset($this->contenu[$article]);
         }   
     }

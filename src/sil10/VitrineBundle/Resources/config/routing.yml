@@ -19,4 +19,5 @@ _articlesParCategorie:
     defaults: { _controller: sil10VitrineBundle:Default:showArticlesParCategorie}
 
 _contenuPanier:
-    pattern:
+    pattern: /contenuPanier
+    defaults: { _controller: sil10VitrineBundle:Panier:showContenuPanier}
