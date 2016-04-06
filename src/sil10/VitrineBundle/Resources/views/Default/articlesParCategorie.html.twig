@@ -4,14 +4,15 @@
         <title>Librio</title>
     </head>
     <body>
-        <a href="{{ path('_default') }}">Retour accueil</a><a href="{{ path('_catalogue') }}">Retour catalogue</a>
+        <a href="{{ path('_default') }}">Retour accueil</a> <a href="{{ path('_catalogue') }}">Retour catalogue</a>
         <table>
-            <tr><td>Libelle</td><td>Prix</td><td>Stock</td></tr>
+            <tr><td>Titre</td><td>Prix</td><td>Stock</td></tr>
             {% for article in articles %}
             <tr>
                 <td>{{ article.libelle }}</td>
                 <td>{{ article.prix }}</td>
                 <td>{{ article.stock }}</td>
+                <td>{{ ajoutArticle(article,1)}}</td>
             </tr>
             {% endfor %}
         </table>

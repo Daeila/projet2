@@ -15,8 +15,8 @@ class __TwigTemplate_06eb0cdaa9b958e0f7b056f1a128c4a9c9b8f2350dc81a26f992cfe277a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b = $this->env->getExtension("native_profiler");
-        $__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b->enter($__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sil10VitrineBundle:Default:index.html.twig"));
+        $__internal_0ef48050ccaaa0786450a6187891af51ba970fd3980ca3280215c410cfc0f254 = $this->env->getExtension("native_profiler");
+        $__internal_0ef48050ccaaa0786450a6187891af51ba970fd3980ca3280215c410cfc0f254->enter($__internal_0ef48050ccaaa0786450a6187891af51ba970fd3980ca3280215c410cfc0f254_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sil10VitrineBundle:Default:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -40,12 +40,15 @@ class __TwigTemplate_06eb0cdaa9b958e0f7b056f1a128c4a9c9b8f2350dc81a26f992cfe277a
         echo "\">Panier</a>
     </body>
     
-    <a href=\"/mention\">Mention</a>
+    <a href=\"";
+        // line 13
+        echo $this->env->getExtension('routing')->getPath("_mention");
+        echo "\">Mention</a>
 </html>
 
 ";
         
-        $__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b->leave($__internal_6147f65c8b8b45887bced2ae96efe59ced2e75071dce9e76ad4320e157a89b8b_prof);
+        $__internal_0ef48050ccaaa0786450a6187891af51ba970fd3980ca3280215c410cfc0f254->leave($__internal_0ef48050ccaaa0786450a6187891af51ba970fd3980ca3280215c410cfc0f254_prof);
 
     }
 
@@ -61,7 +64,7 @@ class __TwigTemplate_06eb0cdaa9b958e0f7b056f1a128c4a9c9b8f2350dc81a26f992cfe277a
 
     public function getDebugInfo()
     {
-        return array (  39 => 10,  35 => 9,  30 => 7,  22 => 1,);
+        return array (  45 => 13,  39 => 10,  35 => 9,  30 => 7,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -76,7 +79,7 @@ class __TwigTemplate_06eb0cdaa9b958e0f7b056f1a128c4a9c9b8f2350dc81a26f992cfe277a
 /*         <a href="{{ path('_contenuPanier') }}">Panier</a>*/
 /*     </body>*/
 /*     */
-/*     <a href="/mention">Mention</a>*/
+/*     <a href="{{ path('_mention') }}">Mention</a>*/
 /* </html>*/
 /* */
 /* */
