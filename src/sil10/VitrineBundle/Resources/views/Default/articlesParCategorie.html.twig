@@ -12,7 +12,7 @@
                 <td>{{ article.libelle }}</td>
                 <td>{{ article.prix }}</td>
                 <td>{{ article.stock }}</td>
-                <td>{{ ajoutArticle(article,1)}}</td>
+                <td><a href="{{ path('_ajouteArticle', {  'idArticle':article.id})}}">Ajouter au panier</a></td>
             </tr>
             {% endfor %}
         </table>

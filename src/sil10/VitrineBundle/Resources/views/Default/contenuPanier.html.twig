@@ -4,16 +4,23 @@
     <title>Librio</title>
 </head>
 <body>
-<a href="{{ path('_default') }}">Retour accueil</a>
-<!-- affiche l’intitulé de chaque article, son prix, la quantité mise en panier et le
-montant total du panier -->
-<table>
-    {% for categorie in categories %}
-        <tr>
-            <td><a href="{{ path('_articlesParCategorie', {  'id':categorie.id})}}">{{categorie.id}}</a></td>
-            <td>{{categorie.intitule}}</td>
-        </tr>
-    {% endfor %}
-</table>
+    <div>
+        <a href="{{ path('_default') }}">Retour accueil</a>
+        <!-- affiche l’intitulé de chaque article, son prix, la quantité mise en panier et le montant total du panier -->
+        {% if contenuPanier is defined and contenuPanier is not empty %}
+            <table>
+                <tr><td>Titre</td><td>Prix</td><td>Quantité en panier</td></tr>
+                {% for article, value in contenuPanier %}
+                    <tr>
+                        <td>article.titre</td>
+                        <td>article.prix</td>
+                        <td>value</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>Votre panier est vide</p>
+        {%  endif %}
+    </div>
 </body>
 </html>

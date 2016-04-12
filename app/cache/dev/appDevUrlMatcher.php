@@ -139,6 +139,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'sil10\\VitrineBundle\\Controller\\PanierController::showContenuPanierAction',  '_route' => '_contenuPanier',);
         }
 
+        // _ajouteArticle
+        if (0 === strpos($pathinfo, '/panier/ajouteArticle') && preg_match('#^/panier/ajouteArticle/(?P<idArticle>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => '_ajouteArticle')), array (  '_controller' => 'sil10\\VitrineBundle\\Controller\\PanierController::ajouteArticleAction',));
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

@@ -21,3 +21,7 @@ _articlesParCategorie:
 _contenuPanier:
     pattern: /contenuPanier
     defaults: { _controller: sil10VitrineBundle:Panier:showContenuPanier}
+
+_ajouteArticle:
+    pattern: /panier/ajouteArticle/{idArticle}
+    defaults: { _controller: sil10VitrineBundle:Panier:ajouteArticle}
