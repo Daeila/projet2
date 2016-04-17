@@ -6,15 +6,16 @@
 <body>
     <div>
         <a href="{{ path('_default') }}">Retour accueil</a>
+        <a href="{{ path('_viderPanier') }}">Vider le panier</a>
         <!-- affiche l’intitulé de chaque article, son prix, la quantité mise en panier et le montant total du panier -->
         {% if contenuPanier is defined and contenuPanier is not empty %}
             <table>
                 <tr><td>Titre</td><td>Prix</td><td>Quantité en panier</td></tr>
                 {% for article, value in contenuPanier %}
                     <tr>
-                        <td>article.titre</td>
-                        <td>article.prix</td>
-                        <td>value</td>
+                        <td>{{ article.libelle }}</td>
+                        <td>{{ article.prix }}</td>
+                        <td>{{ value }}</td>
                     </tr>
                 {% endfor %}
             </table>

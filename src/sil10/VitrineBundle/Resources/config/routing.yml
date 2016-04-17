@@ -25,3 +25,7 @@ _contenuPanier:
 _ajouteArticle:
     pattern: /panier/ajouteArticle/{idArticle}
     defaults: { _controller: sil10VitrineBundle:Panier:ajouteArticle}
+
+_viderPanier:
+    pattern: /panier/viderPanier/
+    defaults: { _controller: sil10VitrineBundle:Panier:viderPanier}

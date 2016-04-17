@@ -11,23 +11,24 @@ class PanierController extends Controller{
 
     public function showContenuPanierAction(){
         $total=0;
-        $articles=[];
+        $articles=array();
         $session = $this->getRequest()->getSession();
         $panier=$session->get('panier');
         if(!empty($panier)){
-            print("passe!!!!!!!!!!!!!!!!!!!");
             foreach ($panier->getContenu() as $idArticle => $value){
                 //Récupérer l'article par son id->$a a est l'Article récupéré
                 //$article[$a]=$value ou value est la quantité
-                $article=$this->getDoctrine()->getManager()->getRepository('Article')->findOneById($idArticle);
+                $article=$this->getDoctrine()->getManager()->getRepository('sil10VitrineBundle:Article')->findOneById($idArticle);
+
+                //TODO ne fonctionne pas
                 $articles[$article]=$value;
 
-                $total=$total+(intval($articles->getPrix()))*$value;
+                $total=$total+(intval($article->getPrix()))*$value;
             }
         }
+
         $session->set('prixPanier',$total);
         $session->set('panier',$panier);
-        var_dump($panier->getContenu());
 
         return $this->render('sil10VitrineBundle:Default:contenuPanier.html.twig',array('contenuPanier'=>$articles,'prixPanier'=>$total));
     }
@@ -43,11 +44,23 @@ class PanierController extends Controller{
         }
         $panier->ajoutArticle($idArticle,1);
 
-        //$session->set('panier',$panier);
-        //var_dump($panier);
+        $session->set('panier',$panier);
 
         return $this->redirectToRoute('_contenuPanier');
-        //return $this->render('sil10VitrineBundle:Default:contenuPanier.html.twig',array('contenuPanier'=>$panier));
+        //return $this->render('sil10VitrineBundle:Default:contenuPanier.html.twig',array
+        //('contenuPanier'=>$panier->getContenu()));
         
+    }
+
+    public function viderPanierAction(){
+        $session = $this->getRequest()->getSession();
+        $panier=$session->get('panier');
+
+        if(!empty($panier)){
+            $panier->viderPanier();
+            $session->set('panier',$panier);
+        }
+
+        return $this->redirectToRoute('_contenuPanier');
     }
 }

@@ -7,8 +7,8 @@ class Panier {
     private $contenu;
     //Tableau - contenu[i] = quantite d'article d’id=i dans le panier)
 
-    public function __construct($contenu){
-        $this->contenu = $contenu;
+    public function __construct(){
+        $this->contenu = [];
     }
 
     
@@ -17,15 +17,20 @@ class Panier {
 
     // $contenu est un tableau avec pour indice un article et comme valeur la quantité de cet article, $qte=1 car
     // on ajoute un article à la fois
-    public function ajoutArticle ($articleId, $qte=1) {
+    public function ajoutArticle ($articleId, $qte=1){
 
-        foreach ($this->contenu as $article => $value) {
-            if($article->getId()==$articleId){
-                $this->contenu[$articleId]=$value+$qte;
+        if (!empty($this->contenu)) {
+            foreach ($this->contenu as $id => $value) {
+
+                if ($id == $articleId) {
+                    $this->contenu[$articleId] = $value + $qte;
+                } else {
+                    $this->contenu[$articleId] = $qte;
+                }
             }
-            else{
-                $this->contenu[$articleId]=$qte;
-            }
+        }
+        else{
+            $this->contenu[$articleId] = $qte;
         }
     }
 
@@ -42,6 +47,4 @@ class Panier {
     function getContenu() {
         return $this->contenu;
     }
-
-
 }

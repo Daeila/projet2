@@ -9,7 +9,7 @@
         {% for categorie in categories %}
             <tr>
                 <td><a href="{{ path('_articlesParCategorie', {  'id':categorie.id})}}">{{categorie.id}}</a></td>
-                <td>{{categorie.intitule}}</td>
+                <td>{{ categorie.intitule }}</td>
             </tr>
         {% endfor %}
         </table>

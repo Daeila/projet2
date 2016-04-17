@@ -38,7 +38,7 @@ class Article
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -61,7 +61,7 @@ class Article
     /**
      * Get libelle
      *
-     * @return string 
+     * @return string
      */
     public function getLibelle()
     {
@@ -84,7 +84,7 @@ class Article
     /**
      * Get prix
      *
-     * @return string 
+     * @return string
      */
     public function getPrix()
     {
@@ -107,7 +107,7 @@ class Article
     /**
      * Get stock
      *
-     * @return integer 
+     * @return integer
      */
     public function getStock()
     {
@@ -130,7 +130,7 @@ class Article
     /**
      * Get categorie
      *
-     * @return \sil10\VitrineBundle\Entity\Categorie 
+     * @return \sil10\VitrineBundle\Entity\Categorie
      */
     public function getCategorie()
     {
